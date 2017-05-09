@@ -1,0 +1,90 @@
+
+body {
+  font-family:'Montserrat';
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: -1;
+}
+
+#container {
+  width: 100%;
+  max-width: 1024px;
+  margin:0 auto;
+  padding: 20px 13px;
+  @include breakpoint-min(medium) {
+    max-width: 80%;
+    padding: 0;
+  }
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  @include breakpoint-min(medium) {
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+.Intro {
+  margin-top: 60px;
+  pointer-events: none;
+
+  @include breakpoint-min(medium) {
+    margin-top: 100px;
+  }
+}
+
+.Intro p {
+  font-weight: bold;
+  color: #ffffff;
+  font-size:32px;
+  max-width: 100%;
+
+  @include breakpoint-min(medium) {
+    font-size: 50px;
+   }
+  &.grey {
+    color: #909090;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size:30px;
+  max-width: 70%;
+
+  @include breakpoint-min(small) {
+    font-size: 35px;
+  }
+
+  @include breakpoint-min(medium) {
+    font-size: 45px;
+    max-width: 100%;
+  }
+}

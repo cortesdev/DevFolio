@@ -1,0 +1,44 @@
+/*!
+Author: R&D Paxlife
+Description: Cloud10world Entertainment
+Version: 1.0.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Paxlife
+
+Tags:
+
+
+*/
+
+@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "colors/colors.scss";
+@import "base/reset.scss";
+@import "variables/variables.scss";
+@import "variables/breakpoints.scss";
+
+
+/** 00. Essemtials
+**********************************/
+@import "mixins/_mixins-master.scss";
+
+/** 01. typography / Icons
+**********************************/
+@import "typography/typography.scss";
+
+/** 02. Base
+**********************************/
+
+@import "base/base.scss";
+@import "base/buttons.scss";
+
+
+/** 03. Modules
+**********************************/
+@import "modules/nav.scss";
+@import "modules/main.scss";
+@import "modules/content.scss";
+@import "modules/footer.scss";
+
+/** 04. Pages
+**********************************/

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="448px" height="448px" viewBox="0 0 448 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>angular</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="angular" fill-rule="nonzero" fill="#444444">
+            <path d="M223.982,32 L411.949,101.105 L372.779,331.494 L223.898,411.443 L75.086,331.392 L36.031,101.11 L223.982,32 L223.982,32 Z M223.981,0 L0,80 L46.12,352 L224,448 L401.75,352 L448,80 L223.981,0 L223.981,0 Z" id="Shape"></path>
+            <path d="M312,320 L352,320 L224,40 L96,320 L136,320 L162.584,264 L285.411,264 L312,320 Z M181.573,224 L223.992,134.644 L266.419,224 L181.573,224 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

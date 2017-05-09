@@ -1,0 +1,51 @@
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 60px;
+    width: 90%;
+
+   [class^='fa-'], [class*=' fa-'], .fa {
+        display: inline;
+    }
+
+    .social {
+      padding: 0 17px;
+      margin-bottom: 0;
+      list-style: none;
+      width: 168px;
+      margin: 0 auto 6px;
+
+       [class^='fa-'], [class*=' fa-'], .fa {
+           display: inline-block;
+       }
+       li {
+         margin-left: 9px;
+         display: inline-block;
+
+         &:hover a i {
+           color: white;
+           -webkit-transition: all 0.3s ease-out;
+           transition: all 0.3s ease-out;
+         }
+       }
+    }
+
+
+    .angular {
+      height: 23px;
+      width: 27px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: bottom;
+      position: relative;
+      margin-right: 0px;
+      margin-bottom: -5px;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+}

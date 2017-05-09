@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "/css/style.css";
+
+/* All the keyframes 'vendor prefix' versions: */
+@-webkit-keyframes blink-it {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink-it {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes blink-it {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes blink-it {
+ 	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Blinking class */
+.blink {
+	-webkit-animation: blink-it steps(1) 1s infinite;
+	-moz-animation: blink-it steps(1) 1s infinite;
+	-ms-animation: blink-it steps(1) 1s infinite;
+	-o-animation: blink-it steps(1) 1s infinite;
+	animation: blink-it steps(1) 1s infinite;
+}
+
+html {
+  background-image: url('http://subtlepatterns.com/patterns/dark_fish_skin.png');
+
+}
+
+ .cursor{
+  color: #f0f0f0;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+.shell {
+  color: #f0f0f0;
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "angular-ui-router-resolve-error",
+  "version": "0.0.1",
+  "description": "AngularJS module that adds support for ui-bootstrap modal states when using ui-router",
+  "main": "angular-ui-router-resolve-error.js",
+  "authors": [
+    "Stepan Riha <github@nonplus.net>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nonplus/angular-ui-router-resolve-error",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "a4e9d623e98cd1fe76d696fbd2e89d3482f4d92e"
+  },
+  "_source": "https://github.com/nonplus/angular-ui-router-resolve-error.git",
+  "_target": "^0.0.1",
+  "_originalSource": "angular-ui-router-resolve-error",
+  "_direct": true
+}

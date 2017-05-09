@@ -1,0 +1,311 @@
+
+.navbar-brand {
+  padding: 0;
+}
+
+.logo {
+    width: 31px;
+    display: inline-block;
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 10px;
+    font-size: 0;
+    position: absolute;
+    top: 16px;
+    min-height: 30px;
+    margin: 0 15px;
+
+    @include breakpoint-min(medium) {
+      width: 30px;
+      min-height: 30px;
+      margin: 10px 15px;
+    }
+}
+
+.navbar-toggler {
+  margin-top: 8px;
+  font-size: 20px;
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+  width: 100%;
+  min-height: 60px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-x: visible;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  -webkit-overflow-scrolling: touch;
+
+  @include breakpoint-min(small) {
+    width: auto;
+  }
+  @include breakpoint-min(medium) {
+    width: 60px;
+    height: 100vh;
+    right: auto;
+  }
+
+}
+
+.nav, .social {
+    padding: 0 17px;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav {
+  @media (min-width: 399px) and (max-width: 543px) {
+    padding: 10px 17px;
+  }
+  @include breakpoint-min(medium) {
+    top: 24vh;
+    position: absolute;
+  }
+}
+
+
+ [class^="fa-"], [class*=" fa-"], .fa {
+    display: none;
+    width: 100%;
+    transform: translateY(-4%);
+    left: 0px;
+    margin-top: 11px;
+    @include breakpoint-min(small) {
+        display: inline-block;
+        margin-top: 0;
+
+    }
+}
+
+ #exCollapsingNavbar2 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-top: 55px;
+
+    @include breakpoint-min(medium) {
+      display: block;
+
+    }
+
+  }
+
+  .nav>li {
+      position: relative;
+      display: inline-block;
+  }
+
+  .nav>li>a {
+      padding: 0;
+      display: inline-flex;
+      @include breakpoint-min(medium) {
+        font-size: 10px;
+      }
+  }
+
+  .navbar-nav .nav-item+.nav-item {
+       margin-left: 0;
+       width: 100%;
+       @include breakpoint-min(medium) {
+        width: auto;
+       }
+  }
+
+
+nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
+  display: none;
+  @include breakpoint-min(medium) {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 6px;
+    display: block;
+  }
+  li {
+    margin-bottom: 6px;
+    width: 26px;
+    text-align:center;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover a i {
+      color: black;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+  }
+}
+section {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+  .navbar-fixed-top .navbar-nav li a:hover i {
+      opacity: 1;
+  }
+
+   .navbar-fixed-top .navbar-nav li a:after {
+      content: 'HOME';
+  }
+  .navbar-fixed-top .navbar-nav li + li a:after {
+      content: 'ABOUT';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li a:after {
+      content: 'SKILLS';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li a:after {
+      content: 'CODING';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+      content: 'WORK';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
+      content: 'CONTACT';
+  }
+// NAVIGATION
+.navbar-nav li a {
+    @include breakpoint-max(x-small) {
+    font-size: 13px!important;
+
+  }
+ }
+
+@include breakpoint-min(small) {
+
+
+
+  .navbar-fixed-top .navbar-nav li a i {
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      width: 25px;
+      text-align: center;
+      float: left;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 24px;
+  }
+
+  .navbar-fixed-top .navbar-nav li a:hover i {
+      opacity: 0;
+
+  }
+
+  .navbar-fixed-top .navbar-nav li a.active,
+  .navbar-fixed-top .navbar-nav li a:hover {
+      color:black;
+  }
+  .navbar-fixed-top .navbar-nav li a:after {
+      content: '';
+      font-size: 13px;
+      top: 10px;
+      left: 0;
+      position: relative;
+      font-size: 10px;
+      display: block;
+      width: 100%;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      opacity: 0;
+      @media (min-width: 0) and (max-width: 543px) {
+        opacity: 1;
+      }
+      @include breakpoint-min(small) {
+        top: -21px;
+
+      }
+
+      @include breakpoint-min(medium) {
+        top: -10px;
+
+      }
+      @include breakpoint-min(large) {
+          left: 16%;
+          text-align: center;
+          display: inline-block;
+          position: absolute;
+          display: block;
+          width: 100%;
+          text-align: left;
+      }
+  }
+  .navbar-fixed-top .navbar-nav li a:after {
+      content: 'HOME';
+  }
+  .navbar-fixed-top .navbar-nav li + li a:after {
+      content: 'ABOUT';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li a:after {
+      content: 'SKILLS';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li a:after {
+      content: 'CODING';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+      content: 'WORK';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
+      content: 'CONTACT';
+
+      @include breakpoint-min(medium) {
+        left: -9px;
+      }
+  }
+
+
+
+  .navbar-fixed-top .navbar-nav li a:hover:after{
+      opacity: 1;
+  }
+
+
+}
+
+@include breakpoint-min(medium) {
+.navbar-fixed-top .navbar-nav li a:after {
+  font-size: 9px;
+  position: absolute;
+  margin-top: 0;
+  left: -3px;
+}
+  .navbar-fixed-top .navbar-nav li a{
+    font-size: 24px;
+    color: #4d4d4e;
+    display: block;
+    line-height: 45px;
+    height: 45px;
+    position: relative;
+  }
+}
+@media (min-width: 386px) and (max-width: 543px) {
+     .fa {
+      display: none;
+     }
+
+}
+
+
+@media (min-width: 543px) and (max-width: 768px) {
+    .collapse {
+      display: inherit;
+      margin-top: 0;
+      margin-top: 0;
+    }
+    #exCollapsingNavbar2 {
+      margin-top: 0;
+    }
+    .nav {
+      display: inline-flex;
+      position: absolute;
+      left: 25%;
+      right: 32%;
+      top: 50%;
+    }
+    .navbar-light .navbar-nav .nav-link {
+       padding-left: 0;
+    }
+    .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    }
+}

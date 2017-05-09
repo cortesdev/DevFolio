@@ -1,6 +1,6 @@
 import { DevFolioPage } from './app.po';
 
-describe('dev-folio App', () => {
+describe('dev-folio App', function() {
   let page: DevFolioPage;
 
   beforeEach(() => {

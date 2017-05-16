@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { Ng2PageTransitionModule } from "ng2-page-transition";
 
 import { AppComponent } from './app.component';
 
@@ -53,7 +54,8 @@ import { InlineSVGModule } from 'ng-inline-svg';
         path:'',
         component: contentAreaComponent
       }
-    ])
+    ]),
+    Ng2PageTransitionModule
   ],
 
   providers: [],

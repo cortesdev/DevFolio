@@ -21,7 +21,6 @@
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.js",
         "../node_modules/particles.js/particles.js",
         "../src/js/inc/particles-json.js"
       ],

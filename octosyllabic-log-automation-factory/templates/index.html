@@ -1,467 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
-   <head>
-      <meta charset="utf-8">
-      <title>Octosyllabic Log Automation Factory [OLAF]</title>
-      <link rel="stylesheet" type="text/css" href="../src/css/style.css">
-      <link rel="icon" href="../src/images/logo.png">
-   </head>
+<head>
+   <title>Octosyllabic Log Automation Factory [OLAF]</title>
+   <style>
+      #logo {
+         max-width: 320px;
+         border: 1px solid;
+         margin: 20px;
+         padding: 30 40 60 30px;
+         float: left;
+      }
 
-   <body>
+      #butt {
+         margin-left: 40px;
+         height: 30px;
+         width: 200px;
+      }
 
-      <header>
+      .framer {
+         border: 1px solid;
+         margin: 20px;
+         padding: 30px;
+         width: 600px;
+      }
 
-         <nav class="navbar navbar-fixed-top navbar-light bg-faded" >
-            <button  class="hidden-desktop" id="change-theme-btn-2"><i class="fa fa-lightbulb-o"></i></button>
+      .marge {
+         margin: 30 0 10 10px;
+      }
 
-            <button class="navbar-toggler hidden-sm-up pull-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
-                &#9776;
-            </button>
-            <a class="navbar-brand" href="#"> </a>
+      .box {
+         margin: 30px;
+         width: 200px;
+         float: right;
+      }
+   </style>
+</head>
 
-            <div class="navbar-collapse collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
-
-               <ol class="nav navbar-nav">
-                      <li class="nav-item active">
-                        <a href="#" class=""><i class="fa fa-home"></i><spam class="nav__item-text">home</spam></a>
-                      </li>
-
-
-               </ol>
-
-
-            </div>
-
-            <button  class="hidden-tablet" id="change-theme-btn"><i class="fa fa-lightbulb-o"></i> Switch</button>
-
-         </nav>
-
-
-
-         <div class="user-nav">
-
-           <form action="/search-autocomplete" class="search" method="post">
-             <input  placeholder="Search"><i class="fa fa-search"></i>
-           </form>
-           <!--
-           {% if isRunning == False %} {% include 'button_create_report.html' %} {% else %} {% include 'currently_creating_report.html' %} {% endif %}
-           -->
-
-
-             <form action="/create-new-report" method="post">
-                 <div>
-                     <button id="butt" class="marge" style="background-color: #f90;" type="submit" value="Send Email">create a new report</button>
-                 </div>
-             </form>
+<body>
+   <div>
+      <div id="logo">
+         <p><b>Welcome to the...</b></p>
+         <div>
+            <pre class="marge">
+      ╔═╗┌─┐┌┬┐┌─┐┌─┐┬ ┬┬  ┬  ┌─┐┌┐ ┬┌─┐
+      ║ ║│   │ │ │└─┐└┬┘│  │  ├─┤├┴┐││
+      ╚═╝└─┘ ┴ └─┘└─┘ ┴ ┴─┘┴─┘┴ ┴└─┘┴└─┘
+      ╦  ┌─┐┌─┐
+      ║  │ ││ ┬
+      ╩═╝└─┘└─┘
+      ╔═╗┬ ┬┌┬┐┌─┐┌┬┐┌─┐┌┬┐┬┌─┐┌┐┌
+      ╠═╣│ │ │ │ ││││├─┤ │ ││ ││││
+      ╩ ╩└─┘ ┴ └─┘┴ ┴┴ ┴ ┴ ┴└─┘┘└┘
+      ╔═╗┌─┐┌─┐┌┬┐┌─┐┬─┐┬ ┬
+      ╠╣ ├─┤│   │ │ │├┬┘└┬┘
+      ╚  ┴ ┴└─┘ ┴ └─┘┴└─ ┴
+            </pre>
+            <p><b style="float: right;">... feel free to just say OLAF.</b></p>
          </div>
-
-      </header>
-
-      <section class="container">
-
-         <div class="row">
-
-               <div id="logo" class=" framer_extra">
-                   <p><b>Welcome to the...</b></p>
-
-                  <div>
-                     <pre class="marge">
-                       ╔═╗┌─┐┌┬┐┌─┐┌─┐┬ ┬┬  ┬  ┌─┐┌┐ ┬┌─┐
-                       ║ ║│   │ │ │└─┐└┬┘│  │  ├─┤├┴┐││
-                       ╚═╝└─┘ ┴ └─┘└─┘ ┴ ┴─┘┴─┘┴ ┴└─┘┴└─┘
-                       ╦  ┌─┐┌─┐
-                       ║  │ ││ ┬
-                       ╩═╝└─┘└─┘
-                       ╔═╗┬ ┬┌┬┐┌─┐┌┬┐┌─┐┌┬┐┬┌─┐┌┐┌
-                       ╠═╣│ │ │ │ ││││├─┤ │ ││ ││││
-                       ╩ ╩└─┘ ┴ └─┘┴ ┴┴ ┴ ┴ ┴└─┘┘└┘
-                       ╔═╗┌─┐┌─┐┌┬┐┌─┐┬─┐┬ ┬
-                       ╠╣ ├─┤│   │ │ │├┬┘└┬┘
-                       ╚  ┴ ┴└─┘ ┴ └─┘┴└─ ┴
-
-
-                  <!-- ╔═╗ ╦   ╔═╗ ╔═╗
-                       ║ ║ ║   ╠═╣ ╠╣
-                       ╚═╝ ╩═╝ ╩ ╩ ╚ -->
-
-                     </pre>
-                        <p><b style="float: right;">... feel free to just say OLAF.</b></p>
-                  </div>
-               </div>
-
-
-               <div class="box">
-               <p>Please address comments and feedback to <a href="mailto:olaf@paxlife.aero">olaf@paxlife.aero</a><br><br>Cheers!</p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-sm-12 col-md-6 col-xl-6">
-
-               <div style="clear: both;">
-                  <div class="framer">
-                     <b>Last ten reports:</b>
-                     <!-- <ul>
-                        {% for r in reports[:10] %}
-                        <li><a href="/reports/{{ r }}">{{ r }}</a></li>
-                        {% endfor %}
-                     </ul> -->
-                     <ul>
-
-                        <li><a href="/reports/report_20170613-112102.xlsx">report_20170613-112102.xlsx</a></li>
-
-                        <li><a href="/reports/report_20170613-112102.csv">report_20170613-112102.csv</a></li>
-
-                        <li><a href="/reports/report_20170613-085601.xlsx">report_20170613-085601.xlsx</a></li>
-
-                        <li><a href="/reports/report_20170613-085601.csv">report_20170613-085601.csv</a></li>
-
-                        <li><a href="/reports/report_20170613-070003.xlsx">report_20170613-070003.xlsx</a></li>
-
-                        <li><a href="/reports/report_20170613-070003.csv">report_20170613-070003.csv</a></li>
-
-                        <li><a href="/reports/report_20170612-172349.xlsx">report_20170612-172349.xlsx</a></li>
-
-                        <li><a href="/reports/report_20170612-172349.csv">report_20170612-172349.csv</a></li>
-
-                        <li><a href="/reports/report_20170612-144545.xlsx">report_20170612-144545.xlsx</a></li>
-
-                        <li><a href="/reports/report_20170612-144545.csv">report_20170612-144545.csv</a></li>
-
-                     </ul>
-               </div>
-            </div>
-
-         </div>
-
-         <div class="col-sm-12 col-md-6 col-xl-6">
-            <div style="clear: both;">
-               <div class="framer">
-                  <b>Current output:</b>
-      <!--             <ul>
-                     {% for o in output %}
-                     <li><a href="/output/{{ o }}">{{ o }}</a></li>
-                     {% endfor %}
-                  </ul>
-                  <ul>
-                     {% for l in logs %}
-                     <li><a href="/log/{{ l }}">{{ l }}</a></li>
-                     {% endfor %}
-                  </ul> -->
-
-
-                  <ul>
-
-                     <li><a href="/output/avionic.json">avionic.json</a></li>
-
-                     <li><a href="/output/avionic_agg.json">avionic_agg.json</a></li>
-
-                     <li><a href="/output/finally_joined_data.json">finally_joined_data.json</a></li>
-
-                     <li><a href="/output/flightradar.json">flightradar.json</a></li>
-
-                     <li><a href="/output/orderdata.json">orderdata.json</a></li>
-
-                     <li><a href="/output/orderdata_agg.json">orderdata_agg.json</a></li>
-
-                     <li><a href="/output/overall_stats.json">overall_stats.json</a></li>
-
-                     <li><a href="/output/revivedata.json">revivedata.json</a></li>
-
-                     <li><a href="/output/revivedata_agg.json">revivedata_agg.json</a></li>
-
-                     <li><a href="/output/userdata.json">userdata.json</a></li>
-
-                  </ul>
-                  <ul>
-
-                     <li><a href="/log/olaf.log">olaf.log</a></li>
-
-                  </ul>
-               </div>
-            </div>
-         </div>
-
       </div>
-
-         <div class="row">
-
-            <div class="col-sm-12 col-xl-12">
-
-
-               <div style="clear: both;">
-                  <div class="framer">
-                     <b>Archive:</b>
-               <!--  <ul>
-                        {% for a in archive %}
-                        <li><a href="/archive/{{ a }}">{{ a }}</a></li>
-                        {% endfor %}
-                     </ul> -->
-
-                     <ul>
-
-                        <li><a href="/archive/20170613-112102.zip">20170613-112102.zip</a></li>
-
-                        <li><a href="/archive/20170613-085601.zip">20170613-085601.zip</a></li>
-
-                        <li><a href="/archive/20170613-070003.zip">20170613-070003.zip</a></li>
-
-                        <li><a href="/archive/20170612-172349.zip">20170612-172349.zip</a></li>
-
-                        <li><a href="/archive/20170612-144545.zip">20170612-144545.zip</a></li>
-
-                        <li><a href="/archive/20170612-103110.zip">20170612-103110.zip</a></li>
-
-                        <li><a href="/archive/20170612-070002.zip">20170612-070002.zip</a></li>
-
-                        <li><a href="/archive/20170611-070002.zip">20170611-070002.zip</a></li>
-
-                        <li><a href="/archive/20170610-070002.zip">20170610-070002.zip</a></li>
-
-                        <li><a href="/archive/20170609-070002.zip">20170609-070002.zip</a></li>
-
-                        <li><a href="/archive/20170608-121930.zip">20170608-121930.zip</a></li>
-
-                        <li><a href="/archive/20170608-095131.zip">20170608-095131.zip</a></li>
-
-                        <li><a href="/archive/20170608-070001.zip">20170608-070001.zip</a></li>
-
-                        <li><a href="/archive/20170607-212530.zip">20170607-212530.zip</a></li>
-
-                        <li><a href="/archive/20170607-140802.zip">20170607-140802.zip</a></li>
-
-                        <li><a href="/archive/20170607-121422.zip">20170607-121422.zip</a></li>
-
-                        <li><a href="/archive/20170607-103157.zip">20170607-103157.zip</a></li>
-
-                        <li><a href="/archive/20170607-070001.zip">20170607-070001.zip</a></li>
-
-                        <li><a href="/archive/20170606-165554.zip">20170606-165554.zip</a></li>
-
-                        <li><a href="/archive/20170606-144149.zip">20170606-144149.zip</a></li>
-
-                        <li><a href="/archive/20170606-070002.zip">20170606-070002.zip</a></li>
-
-                        <li><a href="/archive/20170605-133020.zip">20170605-133020.zip</a></li>
-
-                        <li><a href="/archive/20170605-070002.zip">20170605-070002.zip</a></li>
-
-                        <li><a href="/archive/20170604-070001.zip">20170604-070001.zip</a></li>
-
-                        <li><a href="/archive/20170603-070001.zip">20170603-070001.zip</a></li>
-
-                        <li><a href="/archive/20170602-070002.zip">20170602-070002.zip</a></li>
-
-                        <li><a href="/archive/20170601-070001.zip">20170601-070001.zip</a></li>
-
-                        <li><a href="/archive/20170531-070001.zip">20170531-070001.zip</a></li>
-
-                        <li><a href="/archive/20170530-070001.zip">20170530-070001.zip</a></li>
-
-                        <li><a href="/archive/20170529-211939.zip">20170529-211939.zip</a></li>
-
-                        <li><a href="/archive/20170529-172807.zip">20170529-172807.zip</a></li>
-
-                        <li><a href="/archive/20170529-120906.zip">20170529-120906.zip</a></li>
-
-                        <li><a href="/archive/20170529-070002.zip">20170529-070002.zip</a></li>
-
-                        <li><a href="/archive/20170528-070002.zip">20170528-070002.zip</a></li>
-
-                        <li><a href="/archive/20170527-070001.zip">20170527-070001.zip</a></li>
-
-                        <li><a href="/archive/20170526-070002.zip">20170526-070002.zip</a></li>
-
-                        <li><a href="/archive/20170526-070001.zip">20170526-070001.zip</a></li>
-
-                        <li><a href="/archive/20170525-070002.zip">20170525-070002.zip</a></li>
-
-                        <li><a href="/archive/20170524-070002.zip">20170524-070002.zip</a></li>
-
-                        <li><a href="/archive/20170523-083840.zip">20170523-083840.zip</a></li>
-
-                        <li><a href="/archive/20170522-135339.zip">20170522-135339.zip</a></li>
-
-                        <li><a href="/archive/20170522-123744.zip">20170522-123744.zip</a></li>
-
-                        <li><a href="/archive/20170522-103038.zip">20170522-103038.zip</a></li>
-
-                        <li><a href="/archive/20170522-070002.zip">20170522-070002.zip</a></li>
-
-                        <li><a href="/archive/20170521-070002.zip">20170521-070002.zip</a></li>
-
-                        <li><a href="/archive/20170520-070002.zip">20170520-070002.zip</a></li>
-
-                        <li><a href="/archive/20170519-172526.zip">20170519-172526.zip</a></li>
-
-                        <li><a href="/archive/20170519-114111.zip">20170519-114111.zip</a></li>
-
-                        <li><a href="/archive/20170519-111708.zip">20170519-111708.zip</a></li>
-
-                        <li><a href="/archive/20170519-103937.zip">20170519-103937.zip</a></li>
-
-                        <li><a href="/archive/20170519-090317.zip">20170519-090317.zip</a></li>
-
-                        <li><a href="/archive/20170519-070002.zip">20170519-070002.zip</a></li>
-
-                        <li><a href="/archive/20170518-172012.zip">20170518-172012.zip</a></li>
-
-                        <li><a href="/archive/20170518-123434.zip">20170518-123434.zip</a></li>
-
-                        <li><a href="/archive/20170517-070002.zip">20170517-070002.zip</a></li>
-
-                        <li><a href="/archive/20170516-070003.zip">20170516-070003.zip</a></li>
-
-                        <li><a href="/archive/20170515-105414.zip">20170515-105414.zip</a></li>
-
-                        <li><a href="/archive/20170515-070001.zip">20170515-070001.zip</a></li>
-
-                        <li><a href="/archive/20170514-070002.zip">20170514-070002.zip</a></li>
-
-                        <li><a href="/archive/20170513-070002.zip">20170513-070002.zip</a></li>
-
-                        <li><a href="/archive/20170512-165716.zip">20170512-165716.zip</a></li>
-
-                        <li><a href="/archive/20170512-130953.zip">20170512-130953.zip</a></li>
-
-                        <li><a href="/archive/20170512-070002.zip">20170512-070002.zip</a></li>
-
-                        <li><a href="/archive/20170511-193713.zip">20170511-193713.zip</a></li>
-
-                        <li><a href="/archive/20170511-191849.zip">20170511-191849.zip</a></li>
-
-                        <li><a href="/archive/20170511-171123.zip">20170511-171123.zip</a></li>
-
-                        <li><a href="/archive/20170511-164847.zip">20170511-164847.zip</a></li>
-
-                        <li><a href="/archive/20170511-070002.zip">20170511-070002.zip</a></li>
-
-                        <li><a href="/archive/20170510-162116.zip">20170510-162116.zip</a></li>
-
-                        <li><a href="/archive/20170510-094720.zip">20170510-094720.zip</a></li>
-
-                        <li><a href="/archive/20170509-050002.zip">20170509-050002.zip</a></li>
-
-                        <li><a href="/archive/20170508-114007.zip">20170508-114007.zip</a></li>
-
-                        <li><a href="/archive/20170508-050002.zip">20170508-050002.zip</a></li>
-
-                        <li><a href="/archive/20170507-050002.zip">20170507-050002.zip</a></li>
-
-                        <li><a href="/archive/20170505-084916.zip">20170505-084916.zip</a></li>
-
-                        <li><a href="/archive/20170504-135902.zip">20170504-135902.zip</a></li>
-
-                        <li><a href="/archive/20170504-070002.zip">20170504-070002.zip</a></li>
-
-                        <li><a href="/archive/20170503-070003.zip">20170503-070003.zip</a></li>
-
-                        <li><a href="/archive/20170502-070002.zip">20170502-070002.zip</a></li>
-
-                        <li><a href="/archive/20170501-070002.zip">20170501-070002.zip</a></li>
-
-                        <li><a href="/archive/20170430-070001.zip">20170430-070001.zip</a></li>
-
-                        <li><a href="/archive/20170429-070002.zip">20170429-070002.zip</a></li>
-
-                        <li><a href="/archive/20170428-070001.zip">20170428-070001.zip</a></li>
-
-                        <li><a href="/archive/20170427-070002.zip">20170427-070002.zip</a></li>
-
-                        <li><a href="/archive/20170426-070001.zip">20170426-070001.zip</a></li>
-
-                        <li><a href="/archive/20170425-070001.zip">20170425-070001.zip</a></li>
-
-                        <li><a href="/archive/20170424-132917.zip">20170424-132917.zip</a></li>
-
-                        <li><a href="/archive/20170424-070001.zip">20170424-070001.zip</a></li>
-
-                        <li><a href="/archive/20170423-070002.zip">20170423-070002.zip</a></li>
-
-                        <li><a href="/archive/20170422-070001.zip">20170422-070001.zip</a></li>
-
-                        <li><a href="/archive/20170421-105341.zip">20170421-105341.zip</a></li>
-
-                        <li><a href="/archive/20170421-102455.zip">20170421-102455.zip</a></li>
-
-                        <li><a href="/archive/20170421-070001.zip">20170421-070001.zip</a></li>
-
-                        <li><a href="/archive/20170420-070002.zip">20170420-070002.zip</a></li>
-
-                        <li><a href="/archive/20170419-070002.zip">20170419-070002.zip</a></li>
-
-                        <li><a href="/archive/20170418-205218.zip">20170418-205218.zip</a></li>
-
-                        <li><a href="/archive/20170418-203347.zip">20170418-203347.zip</a></li>
-
-                        <li><a href="/archive/20170418-152322.zip">20170418-152322.zip</a></li>
-
-                        <li><a href="/archive/20170418-070001.zip">20170418-070001.zip</a></li>
-
-                        <li><a href="/archive/20170417-070002.zip">20170417-070002.zip</a></li>
-
-                        <li><a href="/archive/20170416-070002.zip">20170416-070002.zip</a></li>
-
-                        <li><a href="/archive/20170415-234027.zip">20170415-234027.zip</a></li>
-
-                        <li><a href="/archive/20170415-210159.zip">20170415-210159.zip</a></li>
-
-                        <li><a href="/archive/20170414-050001.zip">20170414-050001.zip</a></li>
-
-                        <li><a href="/archive/20170413-151752.zip">20170413-151752.zip</a></li>
-
-                        <li><a href="/archive/20170413-150730.zip">20170413-150730.zip</a></li>
-
-                        <li><a href="/archive/20170413-070002.zip">20170413-070002.zip</a></li>
-
-                        <li><a href="/archive/20170412-070002.zip">20170412-070002.zip</a></li>
-
-                        <li><a href="/archive/20170411-070002.zip">20170411-070002.zip</a></li>
-
-                        <li><a href="/archive/20170410-070001.zip">20170410-070001.zip</a></li>
-
-                        <li><a href="/archive/20170409-070001.zip">20170409-070001.zip</a></li>
-
-                        <li><a href="/archive/20170408-070002.zip">20170408-070002.zip</a></li>
-
-                        <li><a href="/archive/20170407-070002.zip">20170407-070002.zip</a></li>
-
-                        <li><a href="/archive/20170406-070001.zip">20170406-070001.zip</a></li>
-
-                        <li><a href="/archive/20170404-070002.zip">20170404-070002.zip</a></li>
-
-                        <li><a href="/archive/20170401-070001.zip">20170401-070001.zip</a></li>
-
-                        <li><a href="/archive/20170331-070001.zip">20170331-070001.zip</a></li>
-
-                        <li><a href="/archive/20170330-070001.zip">20170330-070001.zip</a></li>
-
-                        <li><a href="/archive/20170329-070001.zip">20170329-070001.zip</a></li>
-
-                        <li><a href="/archive/20170327-070002.zip">20170327-070002.zip</a></li>
-
-                        <li><a href="/archive/20170326-070002.zip">20170326-070002.zip</a></li>
-
-                        <li><a href="/archive/20170325-070002.zip">20170325-070002.zip</a></li>
-
-                        <li><a href="/archive/20170324-070002.zip">20170324-070002.zip</a></li>
-
-                     </ul>
-               </div>
-            </div>
-         </div>
-
-
-      </section>
-
-      <footer>
-        <span>OLAF - Copyright ® 2017 - Paxlife </span>
-      </footer>
-
-      <script src="../src/js/dist/scripts.js"></script>
-      <script src="../src/js/app.js"></script>
-
-   </body>
+      {% if isRunning == False %} {% include 'button_create_report.html' %} {% else %} {% include 'currently_creating_report.html' %} {% endif %}
+      <div class="box">
+         <p>Please address comments and feedback to <a href="mailto:olaf@paxlife.aero">olaf@paxlife.aero</a>.<br><br>Cheers!</p>
+      </div>
+   </div>
+
+   <div style="clear: both;">
+      <div class="framer">
+         <b>Last ten reports:</b>
+         <ul>
+            {% for r in reports[:10] %}
+            <li><a href="/reports/{{ r }}">{{ r }}</a></li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+
+   <div style="clear: both;">
+      <div class="framer">
+         <b>Current output:</b>
+         <ul>
+            {% for o in output %}
+            <li><a href="/output/{{ o }}">{{ o }}</a></li>
+            {% endfor %}
+         </ul>
+         <ul>
+            {% for l in logs %}
+            <li><a href="/log/{{ l }}">{{ l }}</a></li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+
+   <div style="clear: both;">
+      <div class="framer">
+         <b>Archive:</b>
+         <ul>
+            {% for a in archive %}
+            <li><a href="/archive/{{ a }}">{{ a }}</a></li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+
+
+</body>
 
 </html>

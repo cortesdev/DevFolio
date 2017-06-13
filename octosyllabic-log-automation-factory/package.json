@@ -1,0 +1,43 @@
+{
+  "name": "OLAF-LOGS",
+  "version": "1.0.0",
+  "description": "OLAF",
+  "readme": "README.MD",
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "Paymentz"
+  ],
+  "author": "Ricardo - Paxlife R&D",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "graceful-fs": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-bower": "*",
+    "gulp-imagemin": "*",
+    "gulp-include": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-minify": "0.0.14",
+    "gulp-minify-css": "*",
+    "gulp-modernizr": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sass-image": "*",
+    "gulp-uglify": "*",
+    "gulp-usemin": "^0.3.28",
+    "gulp-watch": "*",
+    "gulp-zip": "*",
+    "jshint": "*",
+    "jshint-stylish": "*"
+  }
+}

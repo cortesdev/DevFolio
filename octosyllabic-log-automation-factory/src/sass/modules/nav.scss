@@ -1,0 +1,423 @@
+
+.navbar-brand {
+  margin: 5px 7px;
+  background: url('../images/logo.png') 0 0 no-repeat;
+  height: 50px;
+  width: 68px;
+  background-size: 64px;
+
+  body.dark-theme & {
+    background: url('../images/logo-dark.png') 0 -3px no-repeat;
+    background-size: 64px;
+  }
+  img {
+    width: 56px;
+
+    @include breakpoint-min(medium) {
+      width: 90px;
+   }
+  }
+
+}
+.bg-faded {
+    background-color: transparent;
+}
+
+.logo {
+    width: 31px;
+    display: inline-block;
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 10px;
+    font-size: 0;
+    position: absolute;
+    top: 16px;
+    min-height: 30px;
+    margin: 0 15px;
+
+    @include breakpoint-min(medium) {
+      width: 30px;
+      min-height: 30px;
+      margin: 10px 15px;
+    }
+}
+
+.navbar-toggler {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.navbar-toggler{
+  color: $green;
+  -webkit-transition: all 0.3s ease-in;
+
+  &:focus,
+  &:hover {
+      text-decoration: none;
+      color: #2e5a47;
+
+  }
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+  width: 100%;
+  height: 60px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-x: visible;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0;
+
+  @include breakpoint-min(small) {
+    width: auto;
+    background: white;
+  }
+  @include breakpoint-min(medium) {
+    width: 107px;
+    height: 100vh;
+    right: auto;
+  }
+  body.dark-theme & {
+      background-color: $dark-container;
+      color: $light;
+      li a, .fa , p, b {
+          color: $light;
+
+      }
+  }
+}
+
+.nav, .social {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav__item-text {
+    margin-top: -1px;
+    position: absolute;
+    margin-left: 5px;
+    height: 55px;
+    width: 58%;
+
+    a:hover .nav__item-text &,
+    &:hover {
+
+         color:$light;
+
+    }
+
+}
+
+
+[class^="fa-"], [class*=" fa-"], .fa {
+    display: none;
+    width: 100%;
+    transform: translateY(-4%);
+    left: 0px;
+    margin-top: 11px;
+    color: $green;
+
+    @include breakpoint-min(small) {
+        display: inline-block;
+        margin-top: 0;
+
+    }
+}
+
+ #exCollapsingNavbar2 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-top: 55px;
+
+    @include breakpoint-min(medium) {
+      display: block;
+
+    }
+
+  }
+
+.nav{
+  @include breakpoint-min(medium) {
+    border-top: 1px solid rgba(8, 27, 9, 0.38);
+  }
+}
+
+  .nav>li {
+      position: relative;
+      display: inline-block;
+  }
+
+  .nav>li>a {
+      padding: 0;
+      display: inline-flex;
+      @include breakpoint-min(medium) {
+        font-size: 10px;
+      }
+  }
+
+  .navbar-nav .nav-item  {
+    width: 100%;
+    display: block;
+    float: left;
+    height: 42px;
+    position: relative;
+    border-bottom: 1px solid rgba(170, 181, 170, 0.38) !important;
+
+    @include breakpoint-min(small) {
+      left: -17px;
+
+      width: 110px;
+      display: block;
+      float: left;
+      height: 54px;
+      position: relative;
+      padding-bottom: 51px;
+    }
+
+    @include breakpoint-min(medium) {
+         left: 0;
+
+         body.dark-theme & {
+           border-bottom: 1px solid rgba(8, 27, 9, 0.38)!important;
+         }
+          width: 107px;
+
+         .fa{
+             width: 30px;
+             &:before {
+                 margin-left: 7px;
+             }
+         }
+
+       }
+  }
+
+
+
+
+
+
+
+
+nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
+  display: none;
+  @include breakpoint-min(medium) {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 6px;
+    display: block;
+  }
+  li {
+    margin-bottom: 6px;
+    width: 26px;
+    text-align:center;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover a i {
+      color: $dark;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+  }
+}
+section {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+  .navbar-fixed-top .navbar-nav li a:hover i {
+      opacity: 1;
+  }
+
+// NAVIGATION
+.navbar-nav li {
+
+
+
+
+  &.active {
+    border-left: 2px solid $green;
+
+
+  }
+   @include breakpoint-min(small) {
+    &.active {
+      border-bottom: 2px solid $green;
+      border-left: none;
+    }
+   }
+
+   @include breakpoint-min(medium) {
+    &.active {
+      border-bottom: none;
+      border-left: 2px solid $green;
+    }
+   }
+
+   a {
+      padding-left: 10px;
+
+      @include breakpoint-max(x-small) {
+        font-size: 13px!important;
+
+      }
+   }
+}
+
+@include breakpoint-min(small) {
+
+  .navbar-fixed-top .navbar-nav li a i {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    width: 22px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+
+  }
+
+  .navbar-fixed-top .navbar-nav li a:after {
+      content: '';
+      font-size: 13px;
+      top: 10px;
+      left: 0;
+      position: relative;
+      font-size: 10px;
+      display: block;
+      width: 100%;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      opacity: 0;
+      @media (min-width: 0) and (max-width: 543px) {
+        opacity: 1;
+      }
+      @include breakpoint-min(small) {
+        top: -21px;
+
+      }
+
+      @include breakpoint-min(medium) {
+        top: -10px;
+
+      }
+      @include breakpoint-min(large) {
+          left: 16%;
+          text-align: center;
+          display: inline-block;
+          position: absolute;
+          display: block;
+          width: 100%;
+          text-align: left;
+      }
+  }
+
+  .navbar-fixed-top .navbar-nav li a:hover:after{
+      opacity: 1;
+  }
+
+
+}
+
+@include breakpoint-min(medium) {
+.navbar-fixed-top .navbar-nav li a:after {
+  font-size: 9px;
+  position: absolute;
+  margin-top: 0;
+  left: -3px;
+}
+  .navbar-fixed-top .navbar-nav li a{
+    font-size: 14px;
+    color: #4d4d4e;
+    display: block;
+    height:53px;
+    position: relative;
+    line-height: 54px;
+   }
+  .navbar-fixed-top .navbar-nav li a{
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+
+  .navbar-fixed-top .navbar-nav li a.active,
+  .navbar-fixed-top .navbar-nav li a:hover {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: $dark;
+  }
+
+}
+
+
+@media (min-width: 386px) and (max-width: 543px) {
+     .fa {
+      display: none;
+     }
+
+}
+
+
+@media (min-width: 543px) and (max-width: 768px) {
+    .collapse {
+      display: inherit;
+      margin-top: 0;
+      margin-top: 0;
+    }
+    #exCollapsingNavbar2 {
+      margin-top: 0;
+    }
+    .nav {
+      display: inline-flex;
+      position: absolute;
+      left: 25%;
+      right: 32%;
+      top: 50%;
+    }
+    .navbar-light .navbar-nav .nav-link {
+       padding-left: 0;
+    }
+    .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    }
+}
+
+.nav {
+  border-bottom: 1px solid rgba(170, 181, 170, 0.38) !important;
+
+  @media (min-width: 399px) and (max-width: 543px) {
+    padding: 10px 17px;
+  }
+  @include breakpoint-min(medium) {
+    top: 24vh;
+    position: absolute;
+  }
+
+
+  body.dark-theme & {
+    border-bottom: 1px solid rgba(8, 27, 9, 0.38)!important;
+
+  }
+}
+
+
+::-webkit-input-placeholder {
+  color: rrgba(49, 95, 61, 0.42)gba(85, 160, 105, 0.41);
+}
+::-moz-placeholder {
+  color:rgba(49, 95, 61, 0.42);
+}
+:-ms-input-placeholder {
+  color: rgba(49, 95, 61, 0.42);
+}
+:-moz-placeholder {
+  color:rgba(49, 95, 61, 0.42);
+}

@@ -1,0 +1,60 @@
+/**********************************/
+ /** 01.SCSS BREAKPOINTS
+**********************************/
+ 
+@mixin breakpoint-min($point) {
+  @if $point == x-large {
+    @media (min-width: 1200px) { @content; } // 85.714em
+  }
+  @else if $point == large {
+    @media (min-width: 992px) { @content; } // 70.857em
+  }
+  @else if $point == medium {
+    @media (min-width: 768px) { @content; } // 54.857em
+  }
+  @else if $point == small {
+    @media (min-width: 400px)  { @content; } // To define
+  }
+  @else if $point == x-small {
+    @media (min-width: 330px)  { @content; } // To define
+  }
+  @else if $point == xx-small {
+    @media (min-width: 300px)  { @content; } // To define
+  }
+}
+@mixin breakpoint-max($point) {
+  @if $point == x-large {
+    @media (max-width: 1199px) { @content; } // 85.714em
+  }
+  @else if $point == large {
+    @media (max-width: 991px) { @content; } // 70.857em
+  }
+  @else if $point == medium {
+    @media (max-width: 767px) { @content; } // 54.857em
+  }
+  @else if $point == small {
+    @media (max-width: 399px)  { @content; } // To define
+  }
+  @else if $point == x-small {
+    @media (max-width: 329px)  { @content; } // To define
+  }
+  @else if $point == xx-small {
+    @media (max-width: 299px)  { @content; } // To define
+  }
+
+}
+ 
+//  Use:
+//  .page-wrap {
+//  width: 75%;
+//  @include breakpoint-min(x-large) { width: 60%; }
+//  @include breakpoint-min(large) { width: 60%; }
+//  @include breakpoint-min(medium) { width: 80%; }
+//  @include breakpoint-min(small) { width: 95%; }
+
+//  @include breakpoint-max(x-large) { width: 60%; }
+//  @include breakpoint-max(large) { width: 60%; }
+//  @include breakpoint-max(medium) { width: 80%; }
+//  @include breakpoint-max(small) { width: 95%; }
+//}
+//------------------------------------------------

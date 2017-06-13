@@ -1,0 +1,280 @@
+
+body
+{
+    font-family: 'montserratregular', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+    font-size: 14px;
+    color: #100000;
+    background-color: $light;
+    color: $dark;
+    transition: all 0.15s ease-out;
+    position: relative;
+
+    @include breakpoint-min(medium) {
+      p{font-size: 18px;}
+    }
+
+    &.dark-theme {
+        background-color: $dark;
+        color: $light;
+
+        a, p, b {
+          color: $light;
+
+        }
+    }
+}
+header {
+  height: 60px;
+  position: relative;
+  background: white;
+}
+.row:first-child {
+  padding-top: 55px;
+
+
+  @include breakpoint-min(medium) {
+    padding-top: 15px;
+  }
+}
+
+.hidden-desktop {
+  display: block;
+  position: absolute;
+
+  @include breakpoint-min(medium) {
+    display: none;
+  }
+}
+
+
+.hidden-tablet {
+  display: none;
+
+  @include breakpoint-min(medium) {
+    display: block;
+  }
+}
+
+
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 22px;
+ }
+
+
+
+.container {
+  width: 100%;
+  max-width: 1345px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#logo {
+   max-width: 320px;
+   border: 1px solid;
+   margin: 15px;
+   padding: 30 40 60 30px;
+   float: left;
+}
+.marge {
+  font-family: monospace;
+  font-size: 8px;
+  width: 300px;
+  height: 130px;
+  color: white;
+  margin: 20px -110px;
+  color: $dark;
+
+
+  body.dark-theme & {
+      color: $light;
+  }
+}
+.user-nav {
+    background: #d6d6d6;
+    width: 100%;
+    height: 60px;
+    display: block;
+    position: fixed;
+    margin-top: 60px;
+    z-index: 999;
+
+    @include breakpoint-min(small) {
+      height: 60px;
+
+    }
+
+      @include breakpoint-min(medium) {
+      width: 100%;
+      height: 65px;
+      display: block;
+      position: fixed;
+      margin-top: 0;
+      z-index: 999;
+      margin-top: 0;
+    }
+
+    body.dark-theme & {
+      background: black;
+    }
+}
+
+ul {
+  margin-top: 10px;
+}
+
+.framer li {
+    border-bottom: 1px solid #b9b9b9;
+    padding:7px 11px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      background-color: $dark;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in;
+    }
+    body.dark-theme & {
+       border-bottom: 1px solid #191f1b;
+    }
+}
+
+
+.marge {
+   margin: 30 0 10 10px;
+   font-size: 8px;
+}
+
+.box {
+   margin: 30px;
+   width:33%;
+   float: left;
+
+}
+.framer_extra {
+  margin: 10px;
+  padding: 25px;
+  background: white;
+  border: none !important;
+  box-shadow: 0px 0px 3px 1px rgba(158, 158, 158, 0.14);
+  border-radius: 4px;
+  body.dark-theme & {
+      background-color: $dark-container;
+      color: $light;
+      box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.15);
+
+      a, p, b {
+        color: $light;
+
+      }
+  }
+
+}
+.framer {
+    border-top: 2px solid #55a069;
+    margin: 10px;
+    padding: 25px;
+    background: white;
+    box-shadow: 0px 0px 3px 1px rgba(158, 158, 158, 0.14);
+    border-radius: 4px;
+    min-height: 568px;
+
+    li {
+      padding: 0 11px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+    }
+    b {
+      font-size: 20px;
+      padding: 0 10px;
+      font-weight: bold;
+    }
+
+    body.dark-theme & {
+        background-color: $dark-container;
+        color: $light;
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.15);
+
+        a, p, b {
+          color: $light;
+
+        }
+    }
+}
+
+
+
+
+
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin:0 auto;
+  padding: 20px 13px;
+  @include breakpoint-min(medium) {
+    margin:0 6% 0 auto;
+    max-width: 80%;
+    padding: 0;
+  }
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  @include breakpoint-min(medium) {
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+.Intro {
+  margin-top: 60px;
+  pointer-events: none;
+
+  @include breakpoint-min(medium) {
+    margin-top: 100px;
+  }
+}
+
+.Intro p {
+  font-weight: bold;
+  color: #ffffff;
+  font-size:32px;
+  max-width: 100%;
+
+  @include breakpoint-min(medium) {
+    font-size: 50px;
+   }
+  &.grey {
+    color: #909090;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size:30px;
+  max-width: 70%;
+
+  @include breakpoint-min(small) {
+    font-size: 35px;
+  }
+
+  @include breakpoint-min(medium) {
+    font-size: 45px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+/**********************************/
+ /** 01. BASIC MODULAR STYLING
+**********************************/
+
+*{
+    box-sizing:border-box;
+}
+
+
+// IE reset properties
+
+
+select::-ms-expand {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* IE 5-7 */
+    filter: alpha(opacity=0);
+    /* Good browsers :) */
+    opacity:0;
+}
+ 
+@-ms-viewport { width: device-width;
+-ms-overflow-style:  -ms-autohiding-scrollbar;
+}
+
+
+
+/*Scrollbar
+***********************/
+::-webkit-scrollbar
+{
+  width: 1px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: none;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: none;
+}

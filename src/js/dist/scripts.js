@@ -1389,9 +1389,15 @@ return f}}}else return d(a)}}]}])})(window,window.angular);
 
 // }])
 
-var app = angular.module('myApp', ['ngAnimate']);
+var app = angular.module('myApp', ['ngAnimate'], ['ui.bootstrap']);
 
- 
+
+//myApp.directive('myDirective', function() {});
+//myApp.factory('myService', function() {});
+
+function NavBarCtrl($scope) {
+    $scope.isCollapsed = true;
+}
 
 
 app.controller('MainCtrl',['$scope', function ($scope) {
@@ -1464,4 +1470,3 @@ app.directive('typewrite', ['$timeout', function ($timeout) {
 
 	}]);
 
-  

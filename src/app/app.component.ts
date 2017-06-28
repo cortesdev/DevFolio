@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {enableProdMode} from '@angular/core';
-import { customTransition } from './custom-transition.animation';
 
 enableProdMode();
 
@@ -18,11 +17,9 @@ import { loaderComponent } from './views/loader/app.loaderComponent';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.main.html',
-  animations: [customTransition()],
+  templateUrl: './app.main.html', 
  })
 
 export class AppComponent {
-  customAnimation:any = {custom:true, state:""};
 }
 //  title = ' Welcome Ricardo!';
